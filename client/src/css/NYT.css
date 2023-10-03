@@ -1,0 +1,100 @@
+.nytimes-header {
+  display: flex;
+  align-items: center;
+}
+
+/* .nytimes-banner {
+  align-self: right;
+  margin-right: 100px; 
+} */
+
+.nytimes-logo {
+  margin-right: 10px;
+}
+
+.nytimes-widget {
+  width: 500px;
+  max-height: 400px;
+  font-family:'Times New Roman', Times, serif; 
+  overflow-y: scroll; 
+}
+
+.nytimes-navbar-tabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+  
+.nytimes-navbar-tab {
+  font-family:'Times New Roman', Times, serif; 
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 5px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+  
+  /* Change background color of buttons on hover */
+.nytimes-navbar-tab:hover {
+    background-color: #ddd;
+}
+  
+  /* Create an active/current tablink class */
+.nytimes-navbar-tab.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+.nytimes-display-frame {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  .article-row {
+    position: relative;
+  }
+  .article-hidden {
+    background-color:#ccc;
+    display: none;
+  }
+  .article-row:hover .article-hidden {
+    display: block;
+  }
+
+  .bookmark-btn {
+    width: 15px;
+    float: right;
+  }
+
+  
+
+  .article-row div{
+    font-family:'Times New Roman', Times, serif; 
+    font-size: 12px;
+  }
+  
+  .article-row div.article-headline {
+    margin-top: 5px;
+    font-size: 16px;
+    font-style: bold;
+  }
+  
+  .article-row div.article-byline, 
+  .article-row div.article-date{
+    font-size: 12px;
+    position: relative;
+    left: 5%
+  }
+
+  .article-abstract {
+    font-size: 16px;
+  }
+
+  .article-section {
+    font-size: 14px;
+  }
+  
