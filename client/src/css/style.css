@@ -4,6 +4,17 @@
     
 }
 
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: white;
+    position: relative;
+}
+
 .card-title {
     font-family: 'Titillium Web', sans-serif;
     font-size: 20px;
@@ -78,17 +89,6 @@
     justify-content: flex-end;
 }
 
-.body {
-    border: black 3px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    background-color: white;
-    position: relative;
-}
 
 .btn-space {
     margin-right: 1rem;
