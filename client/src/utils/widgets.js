@@ -1,35 +1,23 @@
-import BoredAPIWidget from '../components/Widgets/Bored';
-import APODWidget from '../components/Widgets/NASA_apod';
-import NBAWidget from '../components/Widgets/NBA';
-import JokeAPIWidget from '../components/Widgets/JokeAPI';
-import BreweryWidget from '../components/Widgets/OpenBrewery';
-import CatFactWidget from '../components/Widgets/CatFact';
-// import webcamWidget from '../components/Widgets/Webcam';
+import NASAwidget from '../components/Widgets/NASA_apod';
+import JokesWidget from '../components/Widgets/JokeAPI';
+import CatWidget from '../components/Widgets/CatFact';
 import NYTimesWidget from '../components/Widgets/NYTimes';
-import SoundCloudWidget from '../components/Widgets/SoundCloud';
+import SoundcloudWidget from '../components/Widgets/SoundCloud';
 import CurrencyConverter from '../components/Widgets/Currency-Converter'
 
 const getWidget = (widgetName) => {
     switch(widgetName) {
-        case 'BoredAPIWidget': 
-            return BoredAPIWidget
-        case 'APODWidget':
-            return APODWidget
-        case 'NBAWidget':
-            return NBAWidget
-        case 'JokeAPIWidget':
-            return JokeAPIWidget
-        case 'BreweryWidget':
-            return BreweryWidget
-        case 'CatFactWidget':
-            return CatFactWidget
-        // case 'webcamWidget':
-        //     return webcamWidget
-        case 'NYTimesWidget':
+        case 'NASA astronomy photo of the day':
+            return NASAwidget
+        case 'Jokes':
+            return JokesWidget
+        case 'Cat':
+            return CatWidget
+        case 'New York Times':
             return NYTimesWidget
-        case 'SoundCloudWidget':
-            return SoundCloudWidget
-        case 'CurrencyConverter':
+        case 'Soundcloud':
+            return SoundcloudWidget
+        case 'Currency Converter':
             return CurrencyConverter
     }
 }
