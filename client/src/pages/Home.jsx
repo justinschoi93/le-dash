@@ -1,4 +1,4 @@
-import APODHomePage from '../components/Widgets/NASAHOMEPAGE'
+import NASAwidget from '../components/Widgets/NASAwidget';
 
 const Home = () => {
     return (
@@ -6,7 +6,7 @@ const Home = () => {
             <div className="alert alert-primary" role="alert">
                 Sign up to create your own dashboard with more widgets!
             </div>
-            <APODHomePage />
+            <NASAwidget />
         </div>
     )
 };

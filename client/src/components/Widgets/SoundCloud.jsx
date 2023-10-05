@@ -2,8 +2,6 @@ import Draggable from 'react-draggable';
 
 export default function SoundCloudWidget (){
     return (
-
-
         <Draggable
               key={SoundCloudWidget}
               position={null}
@@ -52,3 +50,5 @@ const style2 = {
     color: "#cccccc",
     textDecoration: "none"
 }
+
+
