@@ -46,7 +46,7 @@ const Dashboard = () => {
 
 
   const widgets = [
-    'NASA',
+    'NASA astronomy photo of the day',
     'New York Times',
     'Soundcloud',
     'Cat',
@@ -72,8 +72,26 @@ const Dashboard = () => {
       <div className="dashboard">
         {userWidgets.map((widgetName) => {
           const Widget = getWidget(widgetName);
+          console.log(userWidgets)
           return (
-            <Widget/>
+            <Draggable
+              key={widgetName}
+              position={null}
+              grid={[25, 25]}
+              scale={1}
+              bounds="body"
+            >
+              <div className="widget">
+                <div className="widget-navbar">
+                  <button className="widget-maximize-btn widget-btn" onClick={()=>{}}> + </button> 
+                  <button className="widget-minimize-btn widget-btn" onClick={()=>{}}> - </button> 
+                  <button className="widget-delete-btn widget-btn" onClick={() => deleteWidgetHandler(widgetName)}> x </button> 
+                </div>
+                <div className="widget-content">
+                  <Widget/>
+                </div>
+              </div>
+            </Draggable>
           )
         })}
       </div>

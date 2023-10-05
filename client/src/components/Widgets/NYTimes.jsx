@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Draggable from 'react-draggable';
 import NYTapiLogo from '../../images/nytimes_api_logo.png';
 import nytimesheader from '../../images/nytimes-wordmark.svg'
 import BookmarkTag from '../../images/bookmark.png'
@@ -123,19 +122,6 @@ export default function NYTimesWidget () {
     };
 
     return (
-        <Draggable
-                key={NYTimesWidget}
-                position={null}
-                grid={[25, 25]}
-                scale={1}
-                bounds="body"
-            >
-            <div className="widget">
-            <div className="widget-navbar">
-                <button className="widget-maximize-btn widget-btn" onClick={()=>{}}> + </button> 
-                <button className="widget-minimize-btn widget-btn" onClick={()=>{}}> - </button> 
-                <button className="widget-delete-btn widget-btn" onClick={() => deleteWidgetHandler(widgetName)}> x </button> 
-            </div>
             <div className="widget-content">
             <div className="nytimes-widget">
                     <div className="nytimes-navbar">
@@ -280,11 +266,6 @@ export default function NYTimesWidget () {
                     </div>
                 </div>
             </div>
-            </div>
-        </Draggable>
-        
-        
-        
     )
 }
 

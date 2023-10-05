@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Draggable from 'react-draggable';
 // import { useQuery, useMutation } from '@apollo/client';
 // import {NASA_ADD_FAVORITE} from '../../utils/mutations';
 // import { GET_NASA_FAVORITES } from '../../utils/queries';
@@ -57,63 +56,49 @@ export default function NASAwidget() {
     wrapper();
   }, []); 
   return (
-    <Draggable
-              key={NASAwidget}
-              position={null}
-              grid={[25, 25]}
-              scale={1}
-              bounds="body"
-            >
-            <div className="widget">
-            <div className="widget-navbar">
-                <button className="widget-maximize-btn widget-btn" onClick={()=>{}}> + </button> 
-                <button className="widget-minimize-btn widget-btn" onClick={()=>{}}> - </button> 
-                <button className="widget-delete-btn widget-btn" onClick={() => deleteWidgetHandler(widgetName)}> x </button> 
+    
+      <div className="widget-content">
+        <div style={{ width: '19rem' }}>
+          <div>
+            <div className="nasa-header">
+              <img className="nasa-logo" src={nasa_logo}></img>
+              <h5 className="card-title">Astronomy Picture of the Day</h5>
             </div>
-            <div className="widget-content">
-              <div style={{ width: '19rem' }}>
-                <div>
-                  <div className="nasa-header">
-                    <img className="nasa-logo" src={nasa_logo}></img>
-                    <h5 className="card-title">Astronomy Picture of the Day</h5>
+            {/* {viewFavorites ? (
+              <div className="favorites-display">
+                {data.map((fav)=>{
+                  <div className="favorite-photo">
+                    <div>{fav.title}</div>
+                    <img src={fav.src} id={fav.title}/>
+                    <div>{fav.caption}</div>
                   </div>
-                  {/* {viewFavorites ? (
-                    <div className="favorites-display">
-                      {data.map((fav)=>{
-                        <div className="favorite-photo">
-                          <div>{fav.title}</div>
-                          <img src={fav.src} id={fav.title}/>
-                          <div>{fav.caption}</div>
-                        </div>
-                      })}
-                      <button onClick={()=>setViewFavorites(false)}>⭐⭐⭐Photo of the Day⭐⭐⭐</button>
-                    </div> */}
-                    
-                  {/* ) : ( */}
-                    <div className="astronomy-photo-of-the-day-display">
-                      <div className="photo-title">{photoData.title}</div>
-                      <img
-                        src={photoData.src}
-                        className="card-img-top"
-                        alt={photoData.title}
-                      ></img>
-                      <div className="photo-date">{photoData.date}</div>
-                      {/* <button className="me-2 favorite-btn" 
-                        onClick={()=>addToFavorites({
-                          variables: {
-                            photoData: {...photoData}
-                          }
-                        })}>
-                        ⭐Add to Favorites⭐
-                      </button>
-                      <button className="favorite-btn" onClick={()=>setViewFavorites(true)}>⭐View Favorites⭐</button> */}
-                    </div>
-                  {/* )} */}
-                </div>
+                })}
+                <button onClick={()=>setViewFavorites(false)}>⭐⭐⭐Photo of the Day⭐⭐⭐</button>
+              </div> */}
+              
+            {/* ) : ( */}
+              <div className="astronomy-photo-of-the-day-display">
+                <div className="photo-title">{photoData.title}</div>
+                <img
+                  src={photoData.src}
+                  className="card-img-top"
+                  alt={photoData.title}
+                ></img>
+                <div className="photo-date">{photoData.date}</div>
+                {/* <button className="me-2 favorite-btn" 
+                  onClick={()=>addToFavorites({
+                    variables: {
+                      photoData: {...photoData}
+                    }
+                  })}>
+                  ⭐Add to Favorites⭐
+                </button>
+                <button className="favorite-btn" onClick={()=>setViewFavorites(true)}>⭐View Favorites⭐</button> */}
               </div>
-            </div>
+            {/* )} */}
+          </div>
         </div>
-    </Draggable>
+      </div>
   );
 }
 
