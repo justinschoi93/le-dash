@@ -54,12 +54,11 @@ export default function APODWidget() {
     };
 
     wrapper();
-  }, []); // Provide an empty dependency array to run the effect once on mount
-
+  }, []); 
   return (
     <div>
-    <div className="card" style={{ width: '19rem' }}>
-      <div className="card-body">
+    <div style={{ width: '19rem' }}>
+      <div>
         <div className="nasa-header">
           <img className="nasa-logo" src={nasa_logo}></img>
           <h5 className="card-title">Astronomy Picture of the Day</h5>

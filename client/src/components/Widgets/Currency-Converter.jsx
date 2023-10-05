@@ -68,7 +68,7 @@ export default function CurrencyConverter () {
 
 return (
     <div>
-        <div className="card" style={{ width: '18rem' }}>
+        <div style={{ width: '18rem' }}>
             <div>
                 <h5 className="card-title mb-2">Currency Converter</h5>
                 <form>
