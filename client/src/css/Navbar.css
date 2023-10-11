@@ -1,0 +1,30 @@
+.navbar-color {
+    background-color: whitesmoke;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    filter: invert(1);
+}
+
+.wizard-img {
+    height: 100px;
+}
+
+.website-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 64px;
+    color: black;
+    margin-left: 20px;
+}
+
+.website-clock {
+    font-size: 30px;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    border: white 2px solid;
+    border-radius: 20px;
+    color: black;
+}

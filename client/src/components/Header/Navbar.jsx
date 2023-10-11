@@ -6,6 +6,8 @@ import {  Nav, Modal, Tab } from 'react-bootstrap';
 import SignUpForm from './SignUpForm';
 import LoginForm from './loginForm';
 import dayjs from 'dayjs';
+import '../../css/Navbar.css';
+
 export default function NavBarComponent () {
 
   const [showModal, setShowModal] = useState(false);

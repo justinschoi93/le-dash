@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 const nasa_favorites_schema = require('./NASA');
-// const nyt_bookmark_schema = require('./NYT');
+const nyt_bookmark_schema = require('./NYT');
 
 const userSchema = new Schema(
     {
@@ -24,7 +24,7 @@ const userSchema = new Schema(
             // type: Schema.Types.ObjectId,
             // ref: 'Widget'
         NASA_favorites: [nasa_favorites_schema],
-        // NYT_bookmarks: [nyt_bookmark_schema],
+        NYT_bookmarks: [nyt_bookmark_schema],
     }
 );
 

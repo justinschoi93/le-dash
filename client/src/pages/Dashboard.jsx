@@ -49,9 +49,6 @@ const Dashboard = () => {
     'NASA astronomy photo of the day',
     'New York Times',
     'Soundcloud',
-    'Cat',
-    'Jokes',
-    'Currency Converter'
   ];
 
   return (
@@ -72,7 +69,6 @@ const Dashboard = () => {
       <div className="dashboard">
         {userWidgets.map((widgetName) => {
           const Widget = getWidget(widgetName);
-          console.log(userWidgets)
           return (
             <Draggable
               key={widgetName}

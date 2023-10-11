@@ -1,3 +1,6 @@
+.navbar {
+    display: flex;
+}
 .nasa-logo {
     width: 40px;
     height: auto;
@@ -7,4 +10,19 @@
 .nasa-header {
     display: flex;
     align-items: center;
+}
+
+.astronomy-photo-of-the-day-display {
+    display: relative;
+}
+.hidden {
+    display: none;
+}
+
+.astronomy-photo-of-the-day-display .photo:hover + .hidden {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }

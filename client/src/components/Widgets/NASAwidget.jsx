@@ -41,6 +41,7 @@ export default function NASAwidget() {
   useEffect(() => {
     const wrapper = async () => {
       const NASAdata = await getData();
+
       if (NASAdata) {
         setPhotoData({
           date: NASAdata.date,
@@ -57,48 +58,46 @@ export default function NASAwidget() {
   }, []); 
   return (
     
-      <div className="widget-content">
-        <div style={{ width: '19rem' }}>
-          <div>
-            <div className="nasa-header">
-              <img className="nasa-logo" src={nasa_logo}></img>
-              <h5 className="card-title">Astronomy Picture of the Day</h5>
-            </div>
-            {/* {viewFavorites ? (
-              <div className="favorites-display">
-                {data.map((fav)=>{
-                  <div className="favorite-photo">
-                    <div>{fav.title}</div>
-                    <img src={fav.src} id={fav.title}/>
-                    <div>{fav.caption}</div>
-                  </div>
-                })}
-                <button onClick={()=>setViewFavorites(false)}>⭐⭐⭐Photo of the Day⭐⭐⭐</button>
-              </div> */}
-              
-            {/* ) : ( */}
-              <div className="astronomy-photo-of-the-day-display">
-                <div className="photo-title">{photoData.title}</div>
-                <img
-                  src={photoData.src}
-                  className="card-img-top"
-                  alt={photoData.title}
-                ></img>
-                <div className="photo-date">{photoData.date}</div>
-                {/* <button className="me-2 favorite-btn" 
-                  onClick={()=>addToFavorites({
-                    variables: {
-                      photoData: {...photoData}
-                    }
-                  })}>
-                  ⭐Add to Favorites⭐
-                </button>
-                <button className="favorite-btn" onClick={()=>setViewFavorites(true)}>⭐View Favorites⭐</button> */}
-              </div>
-            {/* )} */}
+      <div className="widget-content" style={{ width: '19rem' }}>
+          <div className="nasa-header">
+            <img className="nasa-logo" src={nasa_logo}></img>
+            <h5 className="card-title">Astronomy Picture of the Day</h5>
           </div>
-        </div>
-      </div>
+          {/* {viewFavorites ? (
+            <div className="favorites-display">
+              {data.map((fav)=>{
+                <div className="favorite-photo">
+                  <div>{fav.title}</div>
+                  <img src={fav.src} id={fav.title}/>
+                  <div>{fav.caption}</div>
+                </div>
+              })}
+              <button onClick={()=>setViewFavorites(false)}>⭐⭐⭐Photo of the Day⭐⭐⭐</button>
+            </div> */}
+            
+          {/* ) : ( */}
+          <div className="astronomy-photo-of-the-day-display">
+            <div className="photo-title">{photoData.title}</div>
+            <img
+              src={photoData.src}
+              className="photo"
+              alt={photoData.title}
+            ></img>
+            <div className="photo-date">{photoData.date}</div>
+            {/* <button className="me-2 favorite-btn" 
+              onClick={()=>addToFavorites({
+                variables: {
+                  photoData: {...photoData}
+                }
+              })}>
+              ⭐Add to Favorites⭐
+            </button>
+            <button className="favorite-btn" onClick={()=>setViewFavorites(true)}>⭐View Favorites⭐</button> */}
+          </div>
+          <div className="photo-data hidden">
+              <div className="photo-caption">{photoData.caption}</div>
+          </div>
+      </div>  
   );
 }
 
