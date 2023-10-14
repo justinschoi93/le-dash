@@ -1,4 +1,4 @@
-import NASAwidget from '../components/Widgets/NASAwidget';
+import NASAwidget from '../components/Widgets/NASA';
 import NYTimesWidget from '../components/Widgets/NYTimes';
 import SoundcloudWidget from '../components/Widgets/SoundCloud';
 

@@ -6,10 +6,6 @@ import Draggable from 'react-draggable';
 import nasaLogo from '.././images/nasa_official.png'
 import soundcloudLogo from '.././images/soundcloud.jpg'
 import nytLogo from '.././images/nyt.jpg'
-import randomcatfactLogo from '.././images/store-cat-img.png'
-import jokeLogo from '.././images/jokes.jpeg'
-import currencyLogo from '.././images/currency.jpg'
-
 import getWidget from '../utils/widgets';
 
 

@@ -1,4 +1,4 @@
-import NASAwidget from '../components/Widgets/NASAwidget';
+import NASAwidget from '../components/Widgets/NASA';
 import Draggable from 'react-draggable';
 const Home = () => {
     return (
