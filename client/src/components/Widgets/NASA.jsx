@@ -124,9 +124,9 @@ export default function NASAwidget() {
               ⭐Add to Favorites⭐
             </button>
             <button className="favorite-btn" onClick={()=>setViewFavorites(true)}>⭐View Favorites⭐</button> */}
-          </div>
-          <div className="photo-data hidden">
-              <div className="photo-caption">{photoData.caption}</div>
+            <div className="photo-data hidden">
+                <div className="photo-caption">{photoData.caption}</div>
+            </div>
           </div>
       </div>  
   );
