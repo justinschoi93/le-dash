@@ -56,6 +56,26 @@ export default function NASAwidget() {
 
     wrapper();
   }, []); 
+
+  const isYoutubeLink = photoData.src.includes('youtube');
+
+  
+  let img;
+  
+  if (!isYoutubeLink) {
+    img = new Image();
+    img.src = photoData.src;
+  }
+  
+  let aspectRatio = 16 / 9;
+
+  if (!isYoutubeLink) {
+    aspectRatio = img.naturalWidth / img.naturalHeight;
+  }
+
+  const initialWidth = 300;
+  const initialHeight = initialWidth / aspectRatio;
+
   return (
     
       <div className="widget-content" style={{ width: '19rem' }}>
@@ -78,11 +98,22 @@ export default function NASAwidget() {
           {/* ) : ( */}
           <div className="astronomy-photo-of-the-day-display">
             <div className="photo-title">{photoData.title}</div>
-            <img
-              src={photoData.src}
-              className="photo"
-              alt={photoData.title}
-            ></img>
+            {isYoutubeLink ? (
+              <iframe
+                width="100%"
+                height="100%"
+                src={photoData.src}
+                frameBorder="0"
+                allowFullScreen
+                title={photoData.title}
+              ></iframe>
+            ) : (
+              <img
+                src={photoData.src}
+                className="photo"
+                alt={photoData.title}
+              />
+            )}
             <div className="photo-date">{photoData.date}</div>
             {/* <button className="me-2 favorite-btn" 
               onClick={()=>addToFavorites({
