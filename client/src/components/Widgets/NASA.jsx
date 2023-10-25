@@ -78,7 +78,7 @@ export default function NASAwidget() {
 
   return (
     
-      <div className="widget-content" style={{ width: '19rem' }}>
+      <div className="widget-container" style={{ width: '19rem' }}>
           <div className="nasa-header">
             <img className="nasa-logo" src={nasa_logo}></img>
             <h5 className="card-title">Astronomy Picture of the Day</h5>

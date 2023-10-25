@@ -72,6 +72,8 @@ const Dashboard = () => {
               grid={[25, 25]}
               scale={1}
               bounds="body"
+              handle=".widget-navbar"
+              cancel=".widget-content"
             >
               <div className="widget">
                 <div className="widget-navbar">
