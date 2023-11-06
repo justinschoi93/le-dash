@@ -6,14 +6,14 @@ const Home = () => {
     return (
         <div className="body">
         <div className="dashboard">
-            {/* <Draggable
+            <Draggable
                 key={NASAwidget}
                 position={null}
                 grid={[25, 25]}
                 scale={1}
                 bounds="body"
                 handle=".widget-navbar"
-            > */}
+            >
                 <ResizableBox width={300} height={300}>
                     <div className="widget">
                         <div className="widget-navbar">
@@ -26,7 +26,7 @@ const Home = () => {
                         </div>
                     </div>
                 </ResizableBox>
-            {/* </Draggable> */}
+            </Draggable>
         </div>
         </div>
     )

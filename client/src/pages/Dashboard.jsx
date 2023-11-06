@@ -2,7 +2,7 @@ import { ADD_WIDGET, DELETE_WIDGET } from '../utils/mutations'
 import { GET_ME } from '../utils/queries';
 import { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
-// import Draggable from 'react-draggable';
+import Draggable from 'react-draggable';
 import { ResizableBox } from 'react-resizable';
 import 'react-resizable/css/styles.css';
 import nasaLogo from '.././images/nasa_official.png'
@@ -69,26 +69,27 @@ const Dashboard = () => {
           const Widget = getWidget(widgetName);
 
           return (
-            // <Draggable
-            //   key={widgetName}
-            //   position={null}
-            //   grid={[25, 25]}
-            //   scale={1}
-            //   bounds="body"
-            //   handle=".widget-navbar"
-            //   cancel=".widget-content"
-            // >
-                <ResizableBox className="widget">
-                  <div className="widget-navbar">
-                    <button className="widget-maximize-btn widget-btn" onClick={()=>{}}> + </button> 
-                    <button className="widget-minimize-btn widget-btn" onClick={()=>{}}> - </button> 
-                    <button className="widget-delete-btn widget-btn" onClick={() => deleteWidgetHandler(widgetName)}> x </button> 
-                  </div>
-                  <div className="widget-content">
-                    <Widget/>
-                  </div>
+            <Draggable
+                key={widgetName}
+                position={null}
+                grid={[25, 25]}
+                scale={1}
+                bounds="body"
+                handle=".widget-navbar"
+            >
+                <ResizableBox width={300} height={300}>
+                    <div className="widget">
+                        <div className="widget-navbar">
+                            <button className="widget-maximize-btn widget-btn" onClick={()=>{}}> + </button> 
+                            <button className="widget-minimize-btn widget-btn" onClick={()=>{}}> - </button> 
+                            <button className="widget-delete-btn widget-btn" onClick={() => deleteWidgetHandler(widgetName)}> x </button> 
+                        </div>
+                        <div className="widget-content">
+                            <Widget/>
+                        </div>
+                    </div>
                 </ResizableBox>
-            // </Draggable>
+            </Draggable>
           )
         })}
       </div>
