@@ -1,6 +1,7 @@
 // import { Link } from 'react';
 import Auth from '../../utils/auth';
-import silhouette from '../../images/silhouette.png';
+// import silhouette from '../../images/silhouette.png';
+import monocleman from '../../images/monocle.png'; 
 import { useState } from 'react';
 import {  Nav, Modal, Tab } from 'react-bootstrap';
 import SignUpForm from './SignUpForm';
@@ -17,7 +18,7 @@ export default function NavBarComponent () {
     <header>
       <nav className="navbar navbar-color navbar-expand-lg d-flex justify-content-between">
           <div className="nav">
-            <img className="wizard-img" src={silhouette} alt="Moustache"></img>
+            <img className="monocle-man-img" src={monocleman} alt="monocle-man"></img>
             <a className="navbar-brand website-title" href="/">le dash</a>
           </div>
           <div className="navbar-brand website-clock" >{DT}</div>

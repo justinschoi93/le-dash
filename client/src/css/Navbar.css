@@ -1,24 +1,25 @@
 .navbar-color {
-    background-color: whitesmoke;
+    background-color: black;
+    color: white;
     padding-left: 1rem;
     padding-right: 1rem;
-    filter: invert(1);
+    /* filter: invert(1); */
 }
 
-.wizard-img {
+.monocle-man-img {
     height: 100px;
 }
 
 .website-title {
     font-family: 'Times New Roman', Times, serif;
     font-size: 64px;
-    color: black;
+    color: white;
     margin-left: 20px;
 }
 
 .website-clock {
     font-size: 30px;
-    color: black;
+    color: white;
     display: flex;
     justify-content: center;
 }
@@ -26,5 +27,5 @@
 .nav-link {
     border: white 2px solid;
     border-radius: 20px;
-    color: black;
+    color: white;
 }
